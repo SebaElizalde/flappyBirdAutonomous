@@ -1,6 +1,5 @@
 # coding=utf-8
 import random
-import numpy as np
 
 from conditions import Conditions
 from flappybird import FlappyBird
@@ -9,11 +8,6 @@ from theory import Theory
 LOWER_BLOCK = 0
 UPPER_BLOCK = 1
 BIRD = 2
-
-LEFT = 0
-TOP = 1
-WIDTH = 2
-HEIGHT = 3
 
 HOLDING_KEY = True
 

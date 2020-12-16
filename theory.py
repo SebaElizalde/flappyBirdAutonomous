@@ -1,22 +1,6 @@
 # coding=utf-8
 from copy import deepcopy
 
-from conditions import Conditions
-
-LOWER_BLOCK = 0
-UPPER_BLOCK = 1
-BIRD = 2
-COUNTER = 3
-
-LEFT = 0
-TOP = 1
-WIDTH = 2
-HEIGHT = 3
-JUMP = 4
-JUMPSPEED = 5
-GRAVITY = 6
-DEAD = 7
-
 HOLDING_KEY = True
 
 
@@ -81,7 +65,6 @@ class Theory:
         self.utility = 0
 
         if PE.jump == 16:
-            #assert self.action is HOLDING_KEY
             jumped = True
         else:
             jumped = False
@@ -101,7 +84,7 @@ class Theory:
                 self.utility -= 20
 
         partialUtility = 0
-        below = IC.yDistanceToGapCenter() < 0
+        below = IC.yDistanceToGapCenter < 0
         if below:
             if jumped:
                 if IC.gapCentered:
